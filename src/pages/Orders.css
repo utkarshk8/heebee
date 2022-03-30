@@ -1,0 +1,41 @@
+.container {
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  box-sizing: border-box;
+  position: relative;
+}
+.order_title {
+  text-align: left;
+  font-size: 1.5rem;
+  font-family: "Poppins";
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.order_title > h1 > span {
+  color: #eec510;
+}
+
+.order_menu_button {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 42vw;
+  left: 50vw;
+  margin: 0.8rem 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border: none;
+  box-sizing: border-box;
+  color: #171717;
+  background-color: #eec510;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 720px) {
+  .order_title {
+    font-size: 1.2rem;
+  }
+}

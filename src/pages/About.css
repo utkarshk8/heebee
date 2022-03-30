@@ -1,0 +1,29 @@
+.container {
+  padding-left: 8vw;
+  padding-right: 8vw;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  box-sizing: border-box;
+}
+.inner_container {
+  margin: 2vw;
+}
+.about_headers {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #636363;
+  font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.4;
+  text-rendering: optimizeSpeed;
+  text-transform: uppercase;
+}
+.about_content {
+  color: #636363;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+}

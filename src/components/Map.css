@@ -1,0 +1,36 @@
+.map_section {
+  height: 80vh;
+  position: relative;
+  border-radius: 5rem;
+  padding: 0 2rem;
+  margin-top: -2rem;
+  margin-bottom: 12rem;
+}
+.map_image:hover {
+  transform: scale(1.2);
+}
+.map_image_container {
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.map_image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  transition: 0.8s ease-in-out;
+}
+
+.map_title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Poppins";
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+}
+
+.map_title > h1 > span {
+  color: #eec510;
+}

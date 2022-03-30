@@ -1,0 +1,26 @@
+.footer_container {
+  width: 100vw;
+  height: auto;
+  background-color: #171717;
+  box-sizing: border-box;
+  color: #eec510;
+  font-family: "poppins";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  position: absolute;
+}
+p {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .disappear {
+    display: none;
+  }
+}
