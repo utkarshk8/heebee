@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import slider from "../assets/images/png/slider.png";
 import "./Banner.css";
 
 const Banner = () => {
@@ -7,10 +8,7 @@ const Banner = () => {
   return (
     <section id="home">
       <div className="background">
-        <img
-          src="http://e.heebee.in/skin/frontend/rwd/equasar/heebee/slider.jpg"
-          alt="background"
-        />
+        <img src={slider} alt="background" />
       </div>
       <div className="content">
         <h1 className="content_header">NOW YOU CAN FEEL THE ENERGY</h1>

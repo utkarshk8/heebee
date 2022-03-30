@@ -1,4 +1,5 @@
 import React from "react";
+import map from "../assets/images/png/map.png";
 import "./Map.css";
 
 const Map = () => {
@@ -15,11 +16,7 @@ const Map = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            src="http://e.heebee.in/skin/frontend/rwd/equasar/heebee/map.jpg"
-            alt="map"
-            className="map_image"
-          />
+          <img src={map} alt="map" className="map_image" />
         </a>
       </div>
     </div>
