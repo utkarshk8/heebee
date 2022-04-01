@@ -1,4 +1,5 @@
 import React from "react";
+import Dropdown from "../components/Dropdown";
 import Order from "../components/Order";
 import "./Orders.css";
 
@@ -15,31 +16,42 @@ const Orders = () => {
 
   return (
     <div className="container">
-      <button className="order_menu_button">Menu</button>
-      <div className="order_title">
-        <h1>
-          <span>HEEBEE</span> SPECIALS
-        </h1>
+      <div className="dropdown_button">
+        <Dropdown />
       </div>
-      <Order data={data} />
-      <div className="order_title">
-        <h1>
-          <span>HOT</span> COFFEE
-        </h1>
+
+      <div id="heebee">
+        <div className="order_title">
+          <h1>
+            <span>HEEBEE</span> SPECIALS
+          </h1>
+        </div>
+        <Order data={data} />
       </div>
-      <Order data={data} />
-      <div className="order_title">
-        <h1>
-          <span>COLD</span> COFFEE
-        </h1>
+      <div id="hotcoffee">
+        <div className="order_title">
+          <h1>
+            <span>HOT</span> COFFEE
+          </h1>
+        </div>
+        <Order data={data} />
       </div>
-      <Order data={data} />
-      <div className="order_title">
-        <h1>
-          <span>BEE</span> BITES
-        </h1>
+      <div id="coldcoffee">
+        <div className="order_title">
+          <h1>
+            <span>COLD</span> COFFEE
+          </h1>
+        </div>
+        <Order data={data} />
       </div>
-      <Order data={data} />
+      <div id="beebites">
+        <div className="order_title">
+          <h1>
+            <span>BEE</span> BITES
+          </h1>
+        </div>
+        <Order data={data} />
+      </div>
     </div>
   );
 };

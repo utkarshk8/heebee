@@ -23,7 +23,9 @@
   gap: 4rem;
   margin: 3rem;
   padding: 2rem;
-
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
   cursor: pointer;
 }
 .post_image {
@@ -55,7 +57,10 @@
     height: auto;
   }
   .post_image {
+    display: flex;
     width: 18rem;
+    justify-content: center;
+    align-items: center;
   }
   .actual_image {
     width: 18rem;

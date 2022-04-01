@@ -34,6 +34,7 @@
   letter-spacing: 0.1rem;
   font-weight: 700;
   margin: 0.5rem;
+  text-align: center;
 }
 
 .order_product > h3 {
