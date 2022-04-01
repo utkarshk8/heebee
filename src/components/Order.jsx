@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 import "./Order.css";
 
 const Order = ({ data }) => {
@@ -19,7 +20,7 @@ const Order = ({ data }) => {
             <p className="order_product_description">
               This is the area where Product Description can be showed.
             </p>
-            <button className="order_buy_button">Buy Now</button>
+            <Button />
           </div>
         );
       })}

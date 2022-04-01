@@ -1,0 +1,56 @@
+.order_bigContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 12rem;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background-color: #eec510;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+.order_showcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 800;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.order_nocontainer {
+  display: none;
+}
+.order_bigContainer button {
+  border: none;
+  width: 40%;
+  padding: 0;
+  height: 100%;
+  font-weight: 800;
+  font-size: 1.2rem;
+  align-items: center;
+  background-color: transparent;
+  justify-content: center;
+  cursor: pointer;
+}
+.order_bigContainer div {
+  width: 70%;
+  text-align: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.order_bigContainer:hover {
+  background-color: white;
+  border: 1px solid #eec510;
+}
+.order_bigContainer button:hover {
+  background-color: white;
+}

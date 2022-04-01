@@ -19,7 +19,7 @@
 .posts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 70vh;
+  height: auto;
   gap: 4rem;
   margin: 3rem;
   padding: 2rem;
@@ -68,7 +68,9 @@
     grid-template-columns: repeat(2, 1fr);
     height: auto;
     box-sizing: border-box;
-    margin: 1rem;
+    margin-left: 1rem;
     gap: 2rem;
+    justify-items: center;
+    align-items: center;
   }
 }

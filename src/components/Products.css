@@ -94,6 +94,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     box-sizing: border-box;
+    margin-left: 2rem;
   }
   .product_image {
     width: 18rem;

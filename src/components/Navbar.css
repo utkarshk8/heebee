@@ -1,150 +1,107 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500&display=swap");
+
 nav {
+  display: flex;
+  flex-direction: row;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
 }
-ul {
-  list-style: none;
+nav > div {
+  height: 5rem;
+  width: 10%;
+  position: relative;
 }
 .nav_icon {
-  cursor: pointer;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
 }
-.menu_icon {
-  cursor: pointer;
+.nav_menu_button {
+  display: none;
 }
-
-@media (max-width: 600px) {
-  .nav_icon {
-    width: 14vw;
-    height: auto;
-    padding-left: 1vw;
-    padding-top: 1vw;
+.nav_list1 {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  box-sizing: border-box;
+  padding: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 70%;
+  font-family: "Lato";
+  overflow: hidden;
+}
+.nav_list1 > li {
+  display: flex;
+  width: auto;
+  height: 100%;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  margin-right: 0.5rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  background-color: rgb(255, 254, 254);
+  transition: 300ms ease-in-out;
+}
+.nav_list1 > li:hover {
+  background-color: #eec510;
+  transform: scale(1.1);
+}
+.nav_list2 {
+  display: none;
+}
+@media screen and (max-width: 720px) {
+  nav {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
   }
-  .menu_icon {
-    display: block;
-    position: relative;
-    float: right;
-    width: 10vw;
-    height: auto;
-    padding-right: 1.5vw;
-    padding-top: 1.5vw;
-  }
-  ul {
-    width: 100vw;
-    padding: 0;
-    margin: 0;
-
-    background-color: aliceblue;
-  }
-  li {
-    display: block;
-    margin: 2vw 0;
-    font-family: "Poppins";
-    font-size: 4vw;
-    line-height: 4vh;
-    font-weight: 300;
-    margin: 0;
-  }
-  .list_off {
+  .nav_list1 {
     display: none;
   }
-  .list_on {
+  .nav_list2 {
+    display: block;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    height: 100vh;
     text-align: center;
-    width: 100vw;
-    height: auto;
-  }
-  li:hover {
-    background-color: #eec510;
-    color: #171717;
-  }
-}
-@media (min-width: 600px) {
-  .nav_icon {
-    width: 10vw;
-    height: auto;
-    padding-left: 1vw;
-    padding-top: 1vw;
-  }
-  .menu_icon {
-    display: block;
-    position: relative;
-    float: right;
-    width: 8vw;
-    height: auto;
-    padding-right: 1vw;
-    padding-top: 1.5vw;
-  }
-  ul {
-    width: 100vw;
     padding: 0;
-    margin: 0;
-    font-size: x-large;
-    background-color: aliceblue;
+    list-style-type: none;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 15;
+    align-items: center;
+    background-color: azure;
+    margin-top: 0;
   }
-  li {
-    display: block;
-    margin: 2vw 0;
-    font-family: "Poppins";
-    font-size: 3vw;
+  .nav_list2 > li:hover {
+    background-color: #eec510;
+  }
+  .nav_list2 > li {
+    padding: 2rem 0;
+    font-size: 1.5rem;
     font-weight: 600;
-    line-height: 5vw;
-    margin: 0;
-  }
-  .list_off {
-    display: none;
-  }
-  .list_on {
-    text-align: center;
-    width: 100vw;
-    height: auto;
-  }
-  li:hover {
-    background-color: #eec510;
+    letter-spacing: 0.2em;
+    font-family: "Lato";
+    box-sizing: border-box;
+    border-style: none;
+    transform-origin: 0% 0%;
+    z-index: 20;
+    transition: transform 0.4s ease-in-out;
     color: #171717;
   }
-}
-@media (min-width: 1000px) {
-  .nav_icon {
-    width: 6vw;
-    height: auto;
-    padding-left: 2vw;
-    padding-top: 1vw;
-  }
-  .menu_icon {
-    display: block;
-    position: relative;
-    float: right;
-    width: 4vw;
-    height: auto;
-    padding-right: 1vw;
-    padding-top: 1.5vw;
-  }
-  ul {
-    width: 100vw;
-    padding: 0;
-    margin: 0;
-    font-size: x-large;
-    background-color: aliceblue;
-  }
-  li {
-    display: block;
-    margin: 2vw 0;
-    font-family: "Poppins";
-    font-size: 2.5vw;
-    letter-spacing: 0.5vw;
-    line-height: 5vw;
-    margin: 0;
-  }
-  .list_off {
-    display: none;
-  }
-  .list_on {
-    text-align: center;
-    width: 100vw;
-    height: auto;
-  }
-  li:hover {
-    background-color: #eec510;
-    color: #171717;
+
+  .nav_menu_button {
+    display: flex;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
   }
 }

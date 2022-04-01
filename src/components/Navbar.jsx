@@ -1,68 +1,81 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { ReactComponent as NavIcon } from "../assets/images/svg/heebeeIcon.svg";
 import { ReactComponent as MenuIcon } from "../assets/images/svg/menuIcon.svg";
 import { ReactComponent as CrossIcon } from "../assets/images/svg/crossIcon.svg";
+import { useNavigate } from "react-router";
+import "./Navbar.css";
 
 import "./Navbar.css";
-import { useNavigate } from "react-router";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showList, setShowList] = useState(false);
+  const ref = useRef();
   const navigate = useNavigate();
-  return (
-    <nav>
-      <NavIcon
-        className="nav_icon"
-        onClick={() => {
-          navigate("/");
-          if (showMenu === true) {
-            setShowMenu(!showMenu);
-          }
-        }}
-      />
+  const onBodyClick = (event) => {
+    if (ref.current.contains(event.target)) {
+      return;
+    }
+    setShowList(false);
+  };
+  const toOrderNow = () => {
+    navigate("/orders");
+    setShowList(false);
+  };
+  const toHome = () => {
+    navigate("/");
+    setShowList(false);
+  };
+  const toAboutUs = () => {
+    navigate("/about");
+    setShowList(false);
+  };
 
-      {showMenu ? (
-        <CrossIcon
-          className="menu_icon"
-          onClick={() => {
-            setShowMenu(!showMenu);
-          }}
-        />
-      ) : (
-        <MenuIcon
-          className="menu_icon"
-          onClick={() => {
-            setShowMenu(!showMenu);
-          }}
-        />
-      )}
-      <ul className={showMenu ? "list_on" : "list_off"}>
-        <li
-          onClick={() => {
-            navigate("/");
-            setShowMenu(!showMenu);
-          }}
-        >
-          HOME
-        </li>
-        <li
-          onClick={() => {
-            navigate("/orders");
-            setShowMenu(!showMenu);
-          }}
-        >
-          ORDER/MENU
-        </li>
-        <li
-          onClick={() => {
-            navigate("/about");
-            setShowMenu(!showMenu);
-          }}
-        >
-          ABOUT US
-        </li>
-      </ul>
-    </nav>
+  useEffect(() => {
+    document.body.addEventListener("click", onBodyClick, { capture: true });
+
+    return () => {
+      document.body.removeEventListener("click", onBodyClick, {
+        capture: true,
+      });
+    };
+  }, []);
+
+  return (
+    <>
+      <nav>
+        <div>
+          <NavIcon className="nav_icon" onClick={toHome} />
+        </div>
+        {showList ? (
+          <CrossIcon
+            onClick={() => {
+              setShowList(!showList);
+            }}
+            className="nav_menu_button"
+          />
+        ) : (
+          <MenuIcon
+            onClick={() => {
+              setShowList(!showList);
+            }}
+            className="nav_menu_button"
+          />
+        )}
+
+        <ul className="nav_list1">
+          <li onClick={toHome}>Home</li>
+          <li onClick={toOrderNow}>Order Now</li>
+          <li onClick={toAboutUs}>About Us</li>
+        </ul>
+      </nav>
+      {showList ? (
+        <ul className="nav_list2" ref={ref}>
+          <li onClick={toHome}>Home</li>
+          <li onClick={toOrderNow}>Order Now</li>
+          <li onClick={toAboutUs}>About Us</li>
+        </ul>
+      ) : null}
+    </>
   );
 };
 

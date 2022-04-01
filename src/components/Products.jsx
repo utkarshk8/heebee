@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 import "./Products.css";
 const Products = () => {
   const data = [
@@ -33,7 +34,7 @@ const Products = () => {
               <p className="product_description">
                 This is the area where Product Description can be showed.
               </p>
-              <button className="buy_button">Buy Now</button>
+              <Button />
             </div>
           );
         })}
